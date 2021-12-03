@@ -16,13 +16,19 @@
     "swr": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@linaria/core": "^3.0.0-beta.15",
+    "@linaria/react": "^3.0.0-beta.15",
+    "@linaria/shaker": "^3.0.0-beta.15",
+    "@linaria/webpack-loader": "^3.0.0-beta.16",
     "@types/react": "^17.0.33",
     "@vercel/node": "^1.12.1",
-    "eslint": "<8.0.0",
+    "eslint": "8.3.0",
     "eslint-config-next": "^12.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "2.4.1",
+    "next-linaria": "1.0.1-beta",
+    "prettier": "2.5.0",
     "typescript": "^4.4.4"
   }
 }

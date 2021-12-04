@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+    app:
+        image: next-app
+        build: .
+        networks:
+            traefik:
+        deploy:
+            labels:
+                - traefik.enable=true
+                - traefik.http.routers.next.rule=Host(`next2.ifire.cz`)
+                - traefik.http.routers.next.entrypoints=https
+                - traefik.http.routers.next.tls.certresolver=le
+                - traefik.http.services.next.loadbalancer.server.port=3000
+
+networks:
+    traefik:
+        external: true

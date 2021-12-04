@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { styled } from "@linaria/react";
 
@@ -27,9 +28,12 @@ const HeaderLink: FC<{ text: string; href: string }> = ({ text, href }) => {
     );
 };
 
-const Layout: FC = ({ children }) => {
+const Layout: FC<{ title: string }> = ({ children, title }) => {
     return (
         <>
+            <Head>
+                <title>{title}</title>
+            </Head>
             <Header>
                 <HeaderLink href="/" text="home" />
                 <HeaderLink href="/alpha" text="alpha" />

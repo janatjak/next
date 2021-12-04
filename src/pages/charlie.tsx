@@ -8,7 +8,7 @@ interface Props {
 
 const Page: NextPage<Props> = ({ data }) => {
     return (
-        <Layout>
+        <Layout title="Charlie">
             <h1>getStaticProps</h1>
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </Layout>

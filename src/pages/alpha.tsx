@@ -8,7 +8,7 @@ const Page: NextPage = () => {
     const { data } = useSWR("/api", fetcher, { refreshInterval: 10 });
 
     return (
-        <Layout>
+        <Layout title="Alpha">
             <h1>SWC</h1>
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </Layout>

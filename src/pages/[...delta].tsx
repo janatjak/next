@@ -6,9 +6,11 @@ interface Props {
     data: ApiData;
 }
 
+const ucfirst = (s: string | undefined) => (s !== undefined ? s.charAt(0).toUpperCase() + s.slice(1) : "???");
+
 const Page: NextPage<Props> = ({ data }) => {
     return (
-        <Layout>
+        <Layout title={ucfirst(data?.info)}>
             <h1>getStaticPaths</h1>
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </Layout>

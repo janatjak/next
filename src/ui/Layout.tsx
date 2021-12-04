@@ -3,12 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { styled } from "@linaria/react";
 
-interface Props {
-    text: string;
-    href: string;
-    route?: string;
-}
-
 const Header = styled.div`
     text-align: center;
 `;
@@ -23,12 +17,12 @@ const Main = styled.div`
     padding-top: 20px;
 `;
 
-const HeaderLink: FC<Props> = ({ text, href, route }) => {
+const HeaderLink: FC<{ text: string; href: string }> = ({ text, href }) => {
     const router = useRouter();
 
     return (
         <Link href={href} passHref={true}>
-            <HeaderA active={router.route === (route ?? href)}>{text}</HeaderA>
+            <HeaderA active={router.asPath === href}>{text}</HeaderA>
         </Link>
     );
 };
@@ -41,8 +35,8 @@ const Layout: FC = ({ children }) => {
                 <HeaderLink href="/alpha" text="alpha" />
                 <HeaderLink href="/bravo" text="bravo" />
                 <HeaderLink href="/charlie" text="charlie" />
-                <HeaderLink href="/delta" text="delta" route="/[...delta]" />
-                <HeaderLink href="/echo" text="echo" route="/[...delta]" />
+                <HeaderLink href="/delta" text="delta" />
+                <HeaderLink href="/echo" text="echo" />
             </Header>
             <Main>{children}</Main>
         </>

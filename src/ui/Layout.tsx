@@ -41,6 +41,8 @@ const Layout: FC<{ title: string }> = ({ children, title }) => {
                 <HeaderLink href="/charlie" text="charlie" />
                 <HeaderLink href="/delta" text="delta" />
                 <HeaderLink href="/echo" text="echo" />
+                <HeaderLink href="/private/metal" text="metal" />
+                <HeaderLink href="/private/punk" text="punk" />
             </Header>
             <Main>{children}</Main>
         </>

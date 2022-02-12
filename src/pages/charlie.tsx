@@ -16,20 +16,19 @@ const Page: NextPage<Props> = ({ data }) => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-    try {
-        return {
-            props: {
-                data: await (await fetch(process.env.API_URL + "/api")).json(),
-            },
-            revalidate: 60,
-        };
-    } catch (e) {
-        // TODO - resolve build time error
+    if (process.env.NEXT_BUILD) {
         return {
             notFound: true,
             revalidate: 1,
         };
     }
+
+    return {
+        props: {
+            data: await (await fetch(process.env.API_URL + "/api")).json(),
+        },
+        revalidate: 1,
+    };
 };
 
 export default Page;

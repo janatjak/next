@@ -14,7 +14,7 @@ RUN yarn install && yarn build && \
     mv .next/standalone /home/node && \
     yarn cache clean && rm -rf /tmp
 
-WORKDIR /home/node
+WORKDIR /home/node/standalone
 
 EXPOSE 3000
 CMD ["node", "server.js"]

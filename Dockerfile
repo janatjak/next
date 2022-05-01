@@ -12,7 +12,7 @@ RUN yarn install && yarn build && \
     mv public .next/standalone/public && \
     mv .next/static .next/standalone/.next/static && \
     mv .next/standalone /home/node && \
-    rm -rf /tmp && yarn cache clean
+    yarn cache clean && rm -rf /tmp
 
 WORKDIR /home/node
 

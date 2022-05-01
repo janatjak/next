@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const path = "./.next/prerender-manifest.json";
+const path = "./.next/standalone/.next/prerender-manifest.json";
 
 const data = JSON.parse(fs.readFileSync(path, "utf8"));
 data.notFoundRoutes = []; // cleanup

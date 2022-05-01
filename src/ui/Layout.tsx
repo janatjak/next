@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -28,7 +28,7 @@ const HeaderLink: FC<{ text: string; href: string }> = ({ text, href }) => {
     );
 };
 
-const Layout: FC<{ title: string }> = ({ children, title }) => {
+const Layout: FC<PropsWithChildren<{ title: string }>> = ({ children, title }) => {
     return (
         <>
             <Head>

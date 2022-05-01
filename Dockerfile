@@ -2,11 +2,19 @@ FROM node:alpine
 
 ENV API_URL http://127.0.0.1:3000
 
-WORKDIR /home/node
+WORKDIR /tmp
 
 COPY . .
 
-RUN yarn install && yarn build && yarn install --prod && yarn cache clean
+# public -> standalone/public
+# .next/static -> standalone/.next/static
+RUN yarn install && yarn build && \
+    mv public .next/standalone/public && \
+    mv .next/static .next/standalone/.next/static && \
+    mv .next/standalone /home/node && \
+    rm -rf /tmp && yarn cache clean
+
+WORKDIR /home/node
 
 EXPOSE 3000
-CMD ["yarn", "start"]
+CMD ["node", "server.js"]

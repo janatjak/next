@@ -18,11 +18,11 @@ const Main = styled.div`
     padding-top: 20px;
 `;
 
-const HeaderLink: FC<{ text: string; href: string }> = ({ text, href }) => {
+const HeaderLink: FC<{ text: string; href: string; prefetch?: boolean }> = ({ text, href, prefetch = true }) => {
     const router = useRouter();
 
     return (
-        <Link href={href} passHref={true}>
+        <Link href={href} passHref={true} prefetch={prefetch}>
             <HeaderA active={router.asPath === href}>{text}</HeaderA>
         </Link>
     );
@@ -41,8 +41,8 @@ const Layout: FC<PropsWithChildren<{ title: string }>> = ({ children, title }) =
                 <HeaderLink href="/charlie" text="charlie" />
                 <HeaderLink href="/delta" text="delta" />
                 <HeaderLink href="/echo" text="echo" />
-                <HeaderLink href="/private/metal" text="metal" />
-                <HeaderLink href="/private/punk" text="punk" />
+                <HeaderLink href="/private/metal" text="metal" prefetch={false} />
+                <HeaderLink href="/private/punk" text="punk" prefetch={false} />
             </Header>
             <Main>{children}</Main>
         </>

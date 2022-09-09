@@ -18,7 +18,7 @@ const Main = styled.div`
     padding-top: 20px;
 `;
 
-const HeaderLink: FC<{ text: string; href: string; prefetch?: boolean }> = ({ text, href, prefetch = true }) => {
+const HeaderLink: FC<{ text: string; href: string; prefetch?: boolean }> = ({ text, href, prefetch }) => {
     const router = useRouter();
 
     return (

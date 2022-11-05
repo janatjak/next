@@ -6,7 +6,7 @@ const nextConfig = {
         appDir: true,
     },
     reactStrictMode: true,
-    output: "standalone",
+    // output: "standalone", not supported for now
 };
 
 module.exports = nextConfig;

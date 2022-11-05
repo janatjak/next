@@ -32,5 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+.vscode
+.fleet
 
 tsconfig.tsbuildinfo

@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(req: NextRequest): NextResponse {
-    if (!req.nextUrl.pathname.startsWith("/private")) {
-        return NextResponse.next();
-    }
+export const config = {
+    matcher: "/private/:path*",
+};
 
+export function middleware(req: NextRequest): NextResponse {
     const basicAuth = req.headers.get("authorization");
 
     if (basicAuth) {

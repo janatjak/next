@@ -3,22 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        font-family: 'Courier New', monospace;
-        padding: 1rem 1rem 3rem;
-        max-width: 680px;
-        margin: 0 auto;
+    html.simple {
+        body {
+            font-family: 'Courier New', monospace;
+            padding: 1rem 1rem 3rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        pre {
+            font-size: 0.8rem;
+            text-align: left;
+            padding: 1rem;
+            background-color: #e8e8e8;
+        }
     }
 
-    h1 {
-        font-size: 2rem;
-        font-weight: bold;
-    }
-
-    pre {
-        font-size: 0.8rem;
-        text-align: left;
-        padding: 1rem;
-        background-color: #e8e8e8;
+    /* Fix nextjs layout */
+    [data-nextjs-scroll-focus-boundary] {
+        display: contents;
     }
 }

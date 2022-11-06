@@ -4,7 +4,7 @@ import { HeaderLink } from "./HeaderLink";
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
     return (
-        <html>
+        <html className="simple">
             <head></head>
             <body>
                 <div className="text-center">

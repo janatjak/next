@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from "react";
-import "../../styles/globals.css";
+import "../../../styles/globals.css";
 import { HeaderLink } from "./HeaderLink";
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {

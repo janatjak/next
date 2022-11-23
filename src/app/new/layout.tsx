@@ -1,11 +1,13 @@
 import { FC, PropsWithChildren } from "react";
 import "../../../styles/globals.css";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../../public/img/logo.png";
 
 const navigation = [
     { name: "Homepage", href: "/new", current: true },
     { name: "One", href: "/new/one", current: true },
-    { name: "One > a", href: "/new/one/a", current: true },
+    { name: "One > a", href: "/new/one/a", current: true },
     { name: "One > b", href: "/new/one/b", current: true },
 ];
 
@@ -26,11 +28,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                             <div className="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-gray-100">
                                 <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
                                     <div className="flex flex-shrink-0 items-center px-4">
-                                        <img
-                                            className="h-8 w-auto"
-                                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                            alt="Your Company"
-                                        />
+                                        <Image className="h-8 w-auto" src={logo} alt="Your Company" />
                                     </div>
                                     <nav className="mt-5 flex-1" aria-label="Sidebar">
                                         <div className="space-y-1 px-2">
@@ -55,10 +53,10 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                                     <a href="#" className="group block w-full flex-shrink-0">
                                         <div className="flex items-center">
                                             <div>
-                                                <img
+                                                <Image
                                                     className="inline-block h-9 w-9 rounded-full"
-                                                    src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80"
-                                                    alt=""
+                                                    src={logo}
+                                                    alt="Logo"
                                                 />
                                             </div>
                                             <div className="ml-3">

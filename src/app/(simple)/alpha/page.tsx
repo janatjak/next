@@ -6,7 +6,6 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Page = () => {
     const { data } = useSWR("/api", fetcher, { refreshInterval: 10 * 1000 });
-    console.log(data);
 
     return (
         <>

@@ -1,8 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
-    console.log("render ONE layout");
-
     return (
         <div className="flex flex-row w-full">
             <main className="flex-1">

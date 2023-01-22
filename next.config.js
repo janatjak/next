@@ -4,6 +4,7 @@
 const nextConfig = {
     experimental: {
         appDir: true,
+        runtime: "edge"
     },
     reactStrictMode: true,
     // output: "standalone", not supported for now

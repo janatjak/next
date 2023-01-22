@@ -36,3 +36,5 @@ yarn-error.log*
 .fleet
 
 tsconfig.tsbuildinfo
+
+/static/media

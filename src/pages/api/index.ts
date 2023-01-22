@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 
 export type ApiData = {
     name: string;
@@ -6,18 +6,19 @@ export type ApiData = {
     info?: string;
 };
 
-const handler = (req: NextApiRequest, res: NextApiResponse<ApiData>) => {
+const handler = (req: NextRequest) => {
     let response: ApiData = {
         name: "🚀 Hello world!",
         time: new Date().toISOString(),
         info: undefined,
     };
 
-    if (typeof req.query["info"] === "string") {
-        response.info = req.query["info"];
+    const info = req.nextUrl.searchParams.get("info");
+    if (info) {
+        response.info = info;
     }
 
-    res.status(200).json(response);
+    return NextResponse.json(response);
 };
 
 export default handler;

@@ -6,7 +6,7 @@ export type ApiData = {
     info?: string;
 };
 
-const handler = (req: NextRequest) => {
+export async function GET(req: NextRequest) {
     let response: ApiData = {
         name: "🚀 Hello world!",
         time: new Date().toISOString(),
@@ -19,6 +19,4 @@ const handler = (req: NextRequest) => {
     }
 
     return NextResponse.json(response);
-};
-
-export default handler;
+}

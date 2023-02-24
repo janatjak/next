@@ -16,7 +16,10 @@ export function middleware(req: NextRequest): NextResponse {
         }
     }
 
-    const url = req.nextUrl;
-    url.pathname = "/api/auth";
-    return NextResponse.rewrite(url);
+    return new NextResponse("", {
+        status: 401,
+        headers: {
+            "WWW-Authenticate": 'Basic realm="Secure Area"',
+        },
+    });
 }

@@ -6,6 +6,12 @@ export async function generateStaticParams() {
     return [];
 }
 
+const ucfirst = (s: string | undefined) => (s !== undefined ? s.charAt(0).toUpperCase() + s.slice(1) : "???");
+
+export function generateMetadata({ params }: any) {
+    return { title: ucfirst(params.delta) };
+}
+
 async function getData(info: string): Promise<ApiData> {
     const res = await fetch(`${process.env.API_URL}/api?info=${info}`);
     return res.json();

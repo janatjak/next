@@ -30,7 +30,7 @@
     "baseUrl": "./src/",
     "paths": {
       "@api": [
-        "pages/api"
+        "app/api/route"
       ]
     }
   },

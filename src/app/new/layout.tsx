@@ -2,6 +2,7 @@ import { FC, PropsWithChildren } from "react";
 import "../../../styles/globals.css";
 import Link from "next/link";
 import Image from "next/image";
+import { Analytics } from "@vercel/analytics/react";
 import logo from "../../../public/img/logo.png";
 
 const navigation = [
@@ -75,6 +76,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                     </div>
                     {children}
                 </div>
+                <Analytics />
             </body>
         </html>
     );

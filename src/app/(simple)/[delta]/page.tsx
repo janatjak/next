@@ -8,8 +8,8 @@ export async function generateStaticParams() {
 
 const ucfirst = (s: string | undefined) => (s !== undefined ? s.charAt(0).toUpperCase() + s.slice(1) : "???");
 
-export function generateMetadata({ params }: any) {
-    return { title: ucfirst(params.delta) };
+export async function generateMetadata({ params }: PageProps) {
+    return { title: ucfirst((await params).delta) };
 }
 
 async function getData(info: string): Promise<ApiData> {
@@ -18,13 +18,13 @@ async function getData(info: string): Promise<ApiData> {
 }
 
 interface PageProps {
-    params: {
+    params: Promise<{
         delta: string;
-    };
+    }>;
 }
 
 const Page = async ({ params }: PageProps) => {
-    const data = await getData(params.delta);
+    const data = await getData((await params).delta);
 
     return (
         <>

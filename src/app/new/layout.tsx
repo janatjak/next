@@ -3,6 +3,7 @@ import "../../../styles/globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import logo from "../../../public/img/logo.png";
 
 const navigation = [
@@ -77,6 +78,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                     {children}
                 </div>
                 <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );

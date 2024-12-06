@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../../../styles/globals.css";
 import { HeaderLink } from "./HeaderLink";
 
@@ -20,6 +21,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                 </div>
                 <div className="text-center pt-4">{children}</div>
                 <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );

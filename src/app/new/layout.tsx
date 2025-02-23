@@ -24,12 +24,12 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
             <body className="h-full overflow-hidden">
                 <div className="flex h-full">
                     {/* Static sidebar for desktop */}
-                    <div className="hidden lg:flex lg:flex-shrink-0">
+                    <div className="hidden lg:flex lg:shrink-0">
                         <div className="flex w-64 flex-col">
                             {/* Sidebar component, swap this element with another sidebar if you like */}
                             <div className="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-gray-100">
                                 <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
-                                    <div className="flex flex-shrink-0 items-center px-4">
+                                    <div className="flex shrink-0 items-center px-4">
                                         <Image className="h-8 w-auto" src={logo} alt="Your Company" />
                                     </div>
                                     <nav className="mt-5 flex-1" aria-label="Sidebar">
@@ -51,8 +51,8 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                                         </div>
                                     </nav>
                                 </div>
-                                <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
-                                    <a href="#" className="group block w-full flex-shrink-0">
+                                <div className="flex shrink-0 border-t border-gray-200 p-4">
+                                    <a href="#" className="group block w-full shrink-0">
                                         <div className="flex items-center">
                                             <div>
                                                 <Image

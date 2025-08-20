@@ -7,7 +7,7 @@ export type ApiData = {
 };
 
 export async function GET(req: NextRequest) {
-    let response: ApiData = {
+    const response: ApiData = {
         name: "🚀 Hello world!",
         time: new Date().toISOString(),
         info: undefined,

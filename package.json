@@ -6,7 +6,7 @@
     "dev": "next dev --turbo",
     "build": "NEXT_BUILD=1 next build --turbo",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "prettier": "prettier -w './src/**/*.{tsx,ts}'",
     "test": "next typegen && yarn tsc && yarn lint"
   },
@@ -19,6 +19,7 @@
     "swr": "^2.3.6"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/react": "^19.1.10",
     "@vercel/node": "^5.3.13",

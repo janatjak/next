@@ -13,7 +13,7 @@ const navigation = [
     { name: "One > b", href: "/new/one/b", current: true },
 ];
 
-function classNames(...classes: any[]) {
+function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
 }
 

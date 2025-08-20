@@ -8,12 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier -w './src/**/*.{tsx,ts}'",
-    "test": "yarn lint && yarn tsc"
+    "test": "next typegen && yarn tsc && yarn lint"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "next": "^15.4.7",
+    "next": "^15.5.0",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "swr": "^2.3.6"
@@ -23,7 +23,7 @@
     "@types/react": "^19.1.10",
     "@vercel/node": "^5.3.13",
     "eslint": "^9.33.0",
-    "eslint-config-next": "^15.4.7",
+    "eslint-config-next": "^15.5.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "postcss": "^8.5.6",

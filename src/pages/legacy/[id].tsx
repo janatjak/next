@@ -1,4 +1,5 @@
 import { useParams, usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -20,10 +21,12 @@ function useQuery() {
 }
 
 export default function Page() {
+    const router = useRouter();
     const pathname = usePathname();
     const params = useParams();
     const query = useQuery();
     const [initial] = useState(() => ({
+        legacyPathname: router.pathname,
         pathname,
         params,
         query,
@@ -39,6 +42,7 @@ export default function Page() {
             <pre>
                 {JSON.stringify(
                     {
+                        legacyPathname: router.pathname,
                         pathname,
                         params,
                         query,

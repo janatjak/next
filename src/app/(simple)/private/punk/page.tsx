@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
+import { PHASE_PRODUCTION_BUILD } from "next/dist/shared/lib/constants";
 
 export const revalidate = 0; // TODO fix notFound
 
 const fetchData = async () => {
-    if (process.env.NEXT_BUILD) {
+    if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
         notFound();
     }
 

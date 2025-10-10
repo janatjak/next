@@ -4,7 +4,7 @@ export const config = {
     matcher: "/private/:path*",
 };
 
-export function middleware(req: NextRequest): NextResponse {
+export function proxy(req: NextRequest): NextResponse {
     const basicAuth = req.headers.get("authorization");
 
     if (basicAuth) {

@@ -12,6 +12,7 @@
     "test": "next typegen && yarn tsc && yarn lint"
   },
   "dependencies": {
+    "@sentry/nextjs": "^10",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "next": "16.0.0",

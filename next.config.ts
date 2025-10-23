@@ -1,3 +1,4 @@
+import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -6,4 +7,11 @@ const nextConfig: NextConfig = {
     output: "standalone",
 };
 
-export default nextConfig;
+export default withSentryConfig(nextConfig, {
+    org: "ifire",
+    project: "next",
+    silent: !process.env.CI,
+    widenClientFileUpload: true,
+    disableLogger: true,
+    automaticVercelMonitors: true,
+});

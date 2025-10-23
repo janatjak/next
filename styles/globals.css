@@ -9,13 +9,11 @@
         border-color: var(--color-gray-200, currentColor);
     }
 
-    html.simple {
-        body {
-            font-family: 'Courier New', monospace;
-            padding: 1rem 1rem 3rem;
-            max-width: 680px;
-            margin: 0 auto;
-        }
+    main.simple {
+        font-family: 'Courier New', monospace;
+        padding-top: 1rem;
+        max-width: 680px;
+        margin: 0 auto;
 
         h1 {
             font-size: 2rem;

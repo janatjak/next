@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @layer base {
     *,
@@ -10,7 +10,7 @@
     }
 
     main.simple {
-        font-family: 'Courier New', monospace;
+        font-family: "Courier New", monospace;
         padding-top: 1rem;
         max-width: 680px;
         margin: 0 auto;

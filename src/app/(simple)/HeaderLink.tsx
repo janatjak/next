@@ -1,15 +1,24 @@
 "use client";
 
-import { FC } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export const HeaderLink: FC<{ text: string; href: string; prefetch?: boolean }> = ({ text, href, prefetch }) => {
+interface Props {
+    text: string;
+    href: string;
+    prefetch?: boolean;
+}
+
+export function HeaderLink(props: Props) {
     const pathname = usePathname();
 
     return (
-        <Link href={href} prefetch={prefetch} className={`my-1 mx-2 ` + (pathname === href ? "text-red-600" : "")}>
-            {text}
+        <Link
+            href={props.href}
+            prefetch={props.prefetch}
+            className={`my-1 mx-2 ${pathname === props.href ? "text-red-600" : ""}`}
+        >
+            {props.text}
         </Link>
     );
-};
+}

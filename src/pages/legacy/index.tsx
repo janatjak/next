@@ -6,7 +6,9 @@ export default function Page() {
 
     return (
         <>
-            <button onClick={() => router.push("/new")}>legacy btn with route/navigation</button>
+            <button onClick={() => router.push("/new")} type="button">
+                legacy btn with route/navigation
+            </button>
             <ul>
                 <li>
                     <Link href="/legacy/1">detail 1</Link>

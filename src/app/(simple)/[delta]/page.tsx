@@ -1,4 +1,4 @@
-import { ApiData } from "@api";
+import type { ApiData } from "@api";
 
 export const dynamicParams = true;
 

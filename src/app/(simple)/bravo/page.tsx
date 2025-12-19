@@ -1,7 +1,7 @@
-import { ApiData } from "@api";
+import type { ApiData } from "@api";
 
 const Page = async () => {
-    const data: ApiData = await (await fetch(process.env.API_URL + "/api", { cache: "no-store" })).json();
+    const data: ApiData = await (await fetch(`${process.env.API_URL}/api`, { cache: "no-store" })).json();
 
     return (
         <>

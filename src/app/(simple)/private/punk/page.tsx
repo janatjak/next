@@ -8,7 +8,7 @@ const fetchData = async () => {
         notFound();
     }
 
-    return await (await fetch(process.env.API_URL + "/api")).json();
+    return await (await fetch(`${process.env.API_URL}/api`)).json();
 };
 
 const Page = async () => {

@@ -17,6 +17,7 @@ export function HeaderLink(props: Props) {
             href={props.href}
             prefetch={props.prefetch}
             className={`my-1 mx-2 ${pathname === props.href ? "text-red-600" : ""}`}
+            transitionTypes={["slide"]}
         >
             {props.text}
         </Link>

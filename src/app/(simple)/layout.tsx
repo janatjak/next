@@ -1,4 +1,5 @@
 import type { FC, PropsWithChildren } from "react";
+import { ViewTransition } from "react";
 import "../../../styles/globals.css";
 import { HeaderLink } from "./HeaderLink";
 
@@ -15,7 +16,9 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                 <HeaderLink href="/private/metal" text="metal" prefetch={false} />
                 <HeaderLink href="/private/punk" text="punk" prefetch={false} />
             </div>
-            <div className="text-center pt-4">{children}</div>
+            <div className="text-center pt-4">
+                <ViewTransition>{children}</ViewTransition>
+            </div>
         </main>
     );
 };

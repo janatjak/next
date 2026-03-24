@@ -33,6 +33,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                                         <Link
                                             key={item.id}
                                             href={item.href}
+                                            transitionTypes={["slide-in"]}
                                             className={classNames(
                                                 item.current
                                                     ? "bg-gray-200 text-gray-900"

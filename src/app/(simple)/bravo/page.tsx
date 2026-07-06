@@ -1,4 +1,5 @@
 import type { ApiData } from "@api";
+import type { Metadata } from "next";
 
 const Page = async () => {
     const data: ApiData = await (await fetch(`${process.env.API_URL}/api`, { cache: "no-store" })).json();
@@ -18,6 +19,6 @@ const Page = async () => {
 
 export default Page;
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Bravo",
 };

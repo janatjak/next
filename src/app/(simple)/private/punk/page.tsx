@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { PHASE_PRODUCTION_BUILD } from "next/dist/shared/lib/constants";
+import type { Metadata } from "next";
 
 export const revalidate = 0; // TODO fix notFound
 
@@ -24,6 +25,6 @@ const Page = async () => {
 
 export default Page;
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Private punk",
 };

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
 const Page = () => (
     <div className="space-y-2 grid columns-1">
@@ -9,6 +10,6 @@ const Page = () => (
 );
 export default Page;
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Intro",
 };

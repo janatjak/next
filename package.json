@@ -13,25 +13,25 @@
         "test": "next typegen && yarn tsc && biome format && biome lint"
     },
     "dependencies": {
-        "@sentry/nextjs": "^10.56.0",
+        "@sentry/nextjs": "^10.63.0",
         "@vercel/analytics": "^2.0.1",
         "@vercel/speed-insights": "^2.0.0",
-        "next": "16.2.7",
+        "next": "16.2.10",
         "react": "19.2.7",
         "react-dom": "19.2.7",
-        "swr": "^2.4.1"
+        "swr": "^2.4.2"
     },
     "devDependencies": {
-        "@biomejs/biome": "2.4.16",
-        "@tailwindcss/postcss": "^4.3.0",
+        "@biomejs/biome": "2.5.2",
+        "@tailwindcss/postcss": "^4.3.2",
         "@types/react": "19.2.17",
-        "@vercel/node": "^5.8.12",
-        "postcss": "^8.5.15",
-        "tailwindcss": "^4.3.0",
+        "@vercel/node": "^5.8.22",
+        "postcss": "^8.5.16",
+        "tailwindcss": "^4.3.2",
         "typescript": "^6.0.3"
     },
     "volta": {
-        "node": "24.16.0",
+        "node": "24.18.0",
         "yarn": "4.16.0"
     },
     "packageManager": "yarn@4.16.0"

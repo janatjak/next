@@ -37,5 +37,6 @@ yarn-error.log*
 .fleet
 
 tsconfig.tsbuildinfo
+next-env.d.ts
 
 /static/media

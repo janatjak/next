@@ -9,7 +9,9 @@ const nextConfig: NextConfig = {
         useTypeScriptCli: true,
     },
     // typedRoutes: true,
-    output: "standalone",
+    // Standalone output is only used for Docker; on Vercel (Next 16.3 + Vercel adapter + Turbopack)
+    // next-server.js.nft.json is not generated and the standalone copy step fails with ENOENT.
+    output: process.env.VERCEL ? undefined : "standalone",
 };
 
 export default withSentryConfig(nextConfig, {
